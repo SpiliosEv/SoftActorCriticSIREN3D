@@ -80,7 +80,7 @@ if __name__ ==  '__main__':
                 new_state = env.env_step(state, action)
                 new_state = np.clip(new_state, drone_dim/2, max_dim - 0.5*drone_dim)
                 new_state_relays[k] = new_state
-                VI = env.calculate_reward(new_state, i)
+                VI = env.calculate_reward(new_state, i) / 3
                 agent.remember(state, action, VI, new_state)
             state_relays = new_state_relays
 
@@ -89,7 +89,7 @@ if __name__ ==  '__main__':
 
     for i in range(epochs):
         state_relays = np.array([[10.,8., 0.],[10.,10., 0.],[10.,12, 0.]], np.float32)
-        state_relays = state_relays/max_dim
+        state_relays = state_relays
         accumulated_reward = 0
         for j in range(numSlots):
             new_state_relays = np.zeros_like(state_relays)
@@ -100,7 +100,7 @@ if __name__ ==  '__main__':
                 new_state = env.env_step(state, action)
                 
                 new_state_relays[k] = new_state
-                VI = env.calculate_reward(new_state, j)
+                VI = env.calculate_reward(new_state, j) / 3
                 if k==1:
                     agent.remember(state, action, VI, state)
                 accumulated_reward += VI

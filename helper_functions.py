@@ -5,27 +5,7 @@ from scipy import spatial, linalg, io
 
 
 
-grid_min = 0
-grid_max = 25
-spacing = ((grid_max-grid_min)/ grid_max)
-max_dim = 20
-rMap_RowCells = max_dim
-rMap_ColCells = max_dim
-rMap_zCells = max_dim
-ell = 2.3
-rho = 3
-P_S = 10**((45-30)/10)
-P_R = 10**((55-30)/10)
-sigmaSQ = 1
-sigma_xiSQ = 1.5 #3(in the initial implementation)
-sigma_DSQ = 1
-etaSQ = 6
-c1 = 1.2
-c2 = 0.6
-c3 = 0.5
-m_step = 1
-numSlots = 400
-numRelays = 3
+
 
 def helper_function(grid_min, spacing, rMap_RowCells, rMap_ColCells, rMap_zCells, ell, rho, sigmaSQ, sigma_xiSQ, sigma_DSQ, etaSQ, c1, c2, numSlots):
 
@@ -84,7 +64,7 @@ def helper_function(grid_min, spacing, rMap_RowCells, rMap_ColCells, rMap_zCells
 
 
 
-def create_data_for_shadowing_multipath_phase(rMap_RowCells, rMap_ColCells, rMap_zCells, C_SD, C_SD_chol, numSlots, sigma_xiSQ):
+def create_data_for_shadowing_multipath_phase(rMap_RowCells, rMap_ColCells, rMap_zCells, C_SD, C_SD_chol, numSlots, sigma_xiSQ, kappa):
 
 
   f_Sphase = np.exp(1j*2*np.pi*np.random.uniform(0,1,(rMap_RowCells, rMap_ColCells, rMap_zCells, numSlots+1)))
