@@ -1,3 +1,28 @@
+"""
+*************************************************************************************************************
+Version
+    Last revision: October 2021
+    Author: Spilios Evmorfos
+
+Purpose
+    The purpose of this code is to support the paper:
+    S. Evmorfos, A. Petropulu, Deep Actor-Critic for Continuous 3D Motion Control in Mobile Relay Networks,
+    International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2021
+
+   Any part of this code used in your work should cite the above publication.
+
+This code is provided "as is" to support the ideals of reproducible research. Any issues with this
+code should be reported by email to se386@scarletmail.rutgers.edu
+
+The code is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+available at https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+*************************************************************************************************************
+"""
+
+
+
+
 import numpy as np
 import scipy
 from scipy import spatial, linalg, io 
