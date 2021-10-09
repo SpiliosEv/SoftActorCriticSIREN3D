@@ -7,7 +7,7 @@ from scipy import spatial, linalg, io
 
 
 
-def helper_function(grid_min, spacing, rMap_RowCells, rMap_ColCells, rMap_zCells, ell, rho, sigmaSQ, sigma_xiSQ, sigma_DSQ, etaSQ, c1, c2, numSlots):
+def helper_function(grid_min, spacing, rMap_RowCells, rMap_ColCells, rMap_zCells, ell, rho, sigmaSQ, sigma_xiSQ, sigma_DSQ, etaSQ, c1, c2,c3, numSlots):
 
   totalGridcells = rMap_ColCells*rMap_ColCells*rMap_zCells
   grid_bound = np.linspace(grid_min, rMap_RowCells, rMap_RowCells+1)

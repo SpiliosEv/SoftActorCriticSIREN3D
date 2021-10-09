@@ -75,7 +75,7 @@ if __name__ ==  '__main__':
     
     
     
-    T, C_SD, C_SD_chol, kappa, grid_X, grid_Y, S_cord, D_cord  = helper_function(grid_min, spacing, rMap_RowCells, rMap_zCells, rMap_ColCells, ell, rho, sigmaSQ, sigma_xiSQ, sigma_DSQ, etaSQ, c1, c2, numSlots)
+    T, C_SD, C_SD_chol, kappa, grid_X, grid_Y, S_cord, D_cord  = helper_function(grid_min, spacing, rMap_RowCells, rMap_zCells, rMap_ColCells, ell, rho, sigmaSQ, sigma_xiSQ, sigma_DSQ, etaSQ, c1, c2, c3, numSlots)
 
     f_Smaps = np.load(r"C:\Users\Spilios\OneDrive\Desktop\SoftActorCriticSiren3D\F_S_3D.npy")
     f_Dmaps = np.load(r"C:\Users\Spilios\OneDrive\Desktop\SoftActorCriticSiren3D\F_D_3D.npy")
