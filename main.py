@@ -44,7 +44,6 @@ from Agent import Agent
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu") # initialize a device
 
 if __name__ ==  '__main__':
-    print("hello")
     # parameters for the environment
     grid_min = 0
     grid_max = 25
